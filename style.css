@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Signika Negative", sans-serif;
+}
+
+body {
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Signika Negative", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    background-image: url('images/seigaiha-sea-wave-seamless-pattern-white-and-gray-background-illustration-vector.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolute child elements */
+}
+
+.top-image {
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 4%;
+    z-index: 2; /* Place above clouds */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 2; /* Place above clouds */
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    margin: 10px 0;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add this to center the text with absolute positioning */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.box:hover {
+    box-shadow: 0 0 20px 5px rgba(64, 224, 208, 0.75); /* Glowing neon turquoise shadow */
+    border: 1px solid #40E0D0; /* Optional: add a border to emphasize the effect */
+}
+
+.icon, .icon2 {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px; /* Space between icon and text */
+    position: absolute;
+    left: 20px; /* Align the icon to the left inside the box */
+    object-fit: contain; /* Ensure the icon fits within the box without distortion */
+}
+
+.text {
+    text-align: center; /* Ensure the text is centered */
+    font-size: 1.2rem;
+    flex: 1; /* Allow the text to take up the remaining space */
+    color: black;
+    text-decoration: none;
+}
+
+/* Cloud styles and animations */
+.cloud {
+    position: absolute;
+    opacity: 0.8;
+    animation: float 60s linear infinite;
+    z-index: 1; /* Place clouds behind the content */
+}
+
+.cloud1 {
+    top: 10%;
+    left: -10%;
+    width: 80px;
+    animation-duration: 60s;
+}
+
+.cloud2 {
+    top: 20%;
+    left: -15%;
+    width: 90px;
+    animation-duration: 55s;
+}
+
+.cloud3 {
+    top: 30%;
+    left: -20%;
+    width: 85px;
+    animation-duration: 65s;
+}
+
+.cloud4 {
+    top: 40%;
+    left: -25%;
+    width: 75px;
+    animation-duration: 70s;
+}
+
+.cloud5 {
+    top: 50%;
+    left: -30%;
+    width: 70px;
+    animation-duration: 75s;
+}
+
+.cloud6 {
+    top: 15%;
+    right: -10%;
+    width: 95px;
+    animation: floatReverse 50s linear infinite;
+}
+
+.cloud7 {
+    top: 25%;
+    right: -15%;
+    width: 100px;
+    animation: floatReverse 65s linear infinite;
+}
+
+.cloud8 {
+    top: 35%;
+    right: -20%;
+    width: 80px;
+    animation: floatReverse 60s linear infinite;
+}
+
+.cloud9 {
+    top: 45%;
+    right: -25%;
+    width: 85px;
+    animation: floatReverse 70s linear infinite;
+}
+
+.cloud10 {
+    bottom: 10%;
+    left: -10%;
+    width: 100px;
+    animation-duration: 80s;
+}
+
+.cloud11 {
+    bottom: 20%;
+    left: -15%;
+    width: 90px;
+    animation-duration: 75s;
+}
+
+.cloud12 {
+    bottom: 30%;
+    left: -20%;
+    width: 110px;
+    animation-duration: 85s;
+}
+
+.cloud13 {
+    bottom: 40%;
+    left: -25%;
+    width: 105px;
+    animation-duration: 70s;
+}
+
+.cloud14 {
+    bottom: 50%;
+    right: -30%;
+    width: 95px;
+    animation: floatReverse 65s linear infinite;
+}
+
+.cloud15 {
+    bottom: 60%;
+    right: -35%;
+    width: 100px;
+    animation: floatReverse 90s linear infinite;
+}
+
+.image-text {
+    text-align: center; /* Ensure the text is centered */
+    font-size: 2rem;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(110vw); /* Move clouds across the entire viewport */
+    }
+}
+
+@keyframes floatReverse {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-110vw); /* Move clouds from right to left */
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 480px) {
+    .main {
+        height: auto;
+    }
+
+    .box {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px 20px;
+        margin: 10px 0;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Add this to center the text with absolute positioning */
+        transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    }
+
+    .icon, .icon2 {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        left: 10px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+}
