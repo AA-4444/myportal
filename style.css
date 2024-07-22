@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Signika Negative", sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ a {
     justify-content: center;
     text-align: center;
     position: relative; /* Ensure relative positioning for absolute child elements */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .top-image {
@@ -49,7 +51,7 @@ a {
     padding: 20px; /* Add padding to ensure shadows are not clipped */
     box-sizing: border-box;
     z-index: 2; /* Place above clouds */
-    overflow: visible; /* Ensure overflow is visible to avoid clipping shadows */
+    overflow-x: hidden; /* Ensure overflow is hidden to avoid clipping shadows */
 }
 
 .box {
@@ -64,6 +66,8 @@ a {
     justify-content: center;
     position: relative;
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    max-width: 100%; /* Ensure box doesn't exceed container width */
+    overflow-x: hidden; /* Prevent horizontal overflow within the box */
 }
 .box:hover {
     box-shadow: 0 0 20px rgba(64, 224, 208, 0.75); /* Glowing neon turquoise shadow */
