@@ -24,7 +24,7 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 135vh;
+    height: 140vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,19 +56,17 @@ a {
 
 .box {
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px 20px;
-    margin: 10px 0;
+    margin: 20px; /* Increased margin to provide space for the shadow */
     width: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
-    max-width: 100%; /* Ensure box doesn't exceed container width */
-    overflow-x: hidden; /* Prevent horizontal overflow within the box */
 }
+
 .box:hover {
     box-shadow: 0 0 20px rgba(64, 224, 208, 0.75); /* Glowing neon turquoise shadow */
 }
