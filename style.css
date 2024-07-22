@@ -227,20 +227,26 @@ a {
 @media (max-width: 480px) {
     .main {
         height: auto;
+        overflow-x: hidden; /* Prevent horizontal overflow on mobile */
     }
 
     .box {
         background-color: #fff;
-        border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 30px 20px;
-        margin: 10px 0;
-        width: 300px;
+        padding: 20px 10px; /* Adjust padding to provide more space for the shadow */
+        margin: 20px; /* Increased margin to provide space for the shadow */
+        width: 90%; /* Ensure the box is responsive */
+        width: 300px; /* Max width for mobile screens */
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative; /* Add this to center the text with absolute positioning */
         transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+        overflow: hidden; /* Ensure overflow is hidden to avoid clipping shadows */
+    }
+
+    .box:hover {
+        box-shadow: 0 0 20px rgba(64, 224, 208, 0.75); /* Glowing neon turquoise shadow */
     }
 
     .icon, .icon2 {
