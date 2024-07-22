@@ -57,6 +57,7 @@ a {
 .box {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     padding: 30px 20px;
     margin: 20px; /* Increased margin to provide space for the shadow */
     width: 600px;
@@ -243,6 +244,7 @@ a {
         position: relative; /* Add this to center the text with absolute positioning */
         transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
         overflow: hidden; /* Ensure overflow is hidden to avoid clipping shadows */
+        border-radius: 10px;
     }
 
     .box:hover {
